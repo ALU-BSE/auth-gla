@@ -37,14 +37,20 @@ Most developers reach for GUI tools without understanding what an HTTP request a
 
 1. Open VS Code → Extensions (`Ctrl+Shift+X` / `Cmd+Shift+X`).
 2. Search for **REST Client** by Huachao Mao and install it.
-3. Create a file called `auth_lab.http` at the root of the project. All REST Client requests in this lab go into that file.
+3. Open `auth_lab.http` at the root of the project. All REST Client requests in this lab go into that file.
 
 ---
 
 ## Initial Setup (3 Minutes)
 
 1. Clone this repository to your local machine.
-2. Activate your virtual environment and run `pip install -r requirements.txt`.
+2. Create and activate a virtual environment, then install dependencies:
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate    # macOS / Linux
+   # .venv\Scripts\activate     # Windows
+   pip install -r requirements.txt
+   ```
 3. Start your server: `python manage.py runserver`.
 
 > **Note:** Do not run migrations or create a superuser. A database with the user `admin` and password `admin123` is already included.
