@@ -28,8 +28,9 @@
 ### ═══════════════════════════════════════════════════════════════════════════
 # TODO: Find the JWT login endpoint in api/urls.py.
 # TODO: Write a POST request with a JSON body containing username and password.
-#       Store the returned access token in a variable using @accessToken = ...
-# TODO: Write a GET request to the protected JWT endpoint using
+# After sending, copy the "access" value from the response and paste it below:
+#   @accessToken = <paste the access token here>
+# TODO: Write a GET request to the protected JWT endpoint using:
 #       Authorization: Bearer {{accessToken}}
 # TODO: (Bonus) Write a POST request to refresh the access token using
 #       the refresh token from the login response.

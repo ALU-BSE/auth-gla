@@ -3,12 +3,15 @@
 #
 # Wrap-Up Comparison Table (Reporter fills this in at the end of the lab):
 #
-# | Scheme  | Credential Location | Stateful? | Token Expiry | Revocable? |
-# |---------|---------------------|-----------|--------------|------------|
-# | Basic   |                     |           |              |            |
-# | Session |                     |           |              |            |
-# | Token   |                     |           |              |            |
-# | JWT     |                     |           |              |            |
+# +-------------------+------------+-----------+-------------------+----------+
+# | Method            | Stateful?  | DB Lookup?| Credentials sent  | Safe on  |
+# |                   |            |           | every request?    | HTTP?    |
+# +-------------------+------------+-----------+-------------------+----------+
+# | Basic Auth        |            |           |                   |          |
+# | Session Auth      |            |           |                   |          |
+# | Opaque Token Auth |            |           |                   |          |
+# | JWT               |            |           |                   |          |
+# +-------------------+------------+-----------+-------------------+----------+
 #
 # ─────────────────────────────────────────────────────────────────────────────
 

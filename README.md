@@ -63,14 +63,17 @@ Basic Auth is the simplest method — it passes credentials directly in the head
 
 ### Driver Task
 
-Open `views.py` and locate `basic_auth_view`. Add the following:
+Open `views.py` and locate `basic_auth_view`. **Replace the entire function** (keep the decorators) with the following:
 
 ```python
+@api_view(["GET"])
+@authentication_classes([BasicAuthentication])
+@permission_classes([IsAuthenticated])
 def basic_auth_view(request):
     # TODO: Extract and print the header
     auth_header = request.META.get('HTTP_AUTHORIZATION')
     print(f"Incoming Header: {auth_header}")
-    return JsonResponse({"message": "Check your terminal!"})
+    return Response({"message": "Check your terminal!"})
 ```
 
 ### REST Client Operator Task
